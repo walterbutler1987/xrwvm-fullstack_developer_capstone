@@ -139,9 +139,6 @@ def get_dealer_details(request, dealer_id):
 def add_review(request):
     if (request.user.is_authenticated):
         data = json.loads(request.body)
-
-        except Exception as e:
-            print(f"Error: {e}")
     else:
         return JsonResponse(
             {"status": 403, "message": "Unauthorized"}
