@@ -117,7 +117,7 @@ def add_review(request):
     if (request.user.is_anonymous is False):
         data = json.loads(request.body)
         try:
-            response = post_review(data)
+            #response = post_review(data)
             return JsonResponse({"status": 200})
         except Exception:
             return JsonResponse({"status": 401,
@@ -127,6 +127,7 @@ def add_review(request):
     else:
         return JsonResponse({"status": 403,
                              "message": "Unauthorized"})
+
 
 # Get list of cars
 def get_cars(request):
