@@ -1,9 +1,4 @@
 # Uncomment the required imports before adding the code
-from django.http import HttpResponseRedirect, HttpResponse
-from django.shortcuts import get_object_or_404, render, redirect
-from django.shortcuts import render
-from django.contrib import messages
-from datetime import datetime
 from django.contrib.auth.models import User
 from django.contrib.auth import logout
 from django.http import JsonResponse
